@@ -1,0 +1,2 @@
+﻿ALTER TABLE Grades
+ADD [GroupName] NVARCHAR(50) NOT NULL;
