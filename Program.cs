@@ -61,8 +61,19 @@ namespace ConsoleApp1
                     string query;
                     while (true)
                     {
-                        Console.WriteLine("Choose an option from below to execute (Enter a digit from 1 to 5):");
-                        Console.WriteLine("\t1 - Show all info from DB.\n\t2 - Show full names of students.\n\t3 - Show all average grades.\n\t4 - Show full names of students with minmal grade of certain level.\n\t5 - Show subjects with minimal average grades.\n\tAny other key to exit.");
+                        Console.WriteLine("Choose an option from below to execute (Enter a digit from 1 to 11):");
+                        Console.WriteLine("\t1 - Show all info from DB." +
+                                          "\n\t2 - Show full names of students." +
+                                          "\n\t3 - Show all average grades." +
+                                          "\n\t4 - Show full names of students with minmal grade of certain level." +
+                                          "\n\t5 - Show subjects with minimal average grades." +
+                                          "\n\t6 - Show minimal average grade." +
+                                          "\n\t7 - Show maximal average grade." +
+                                          "\n\t8 - Show number of stidents with minimal average grade at mathematics." +
+                                          "\n\t9 - Show number of stidents with maximal average grade at mathematics." +
+                                          "\n\t10 - Show number of stidents in each group." +
+                                          "\n\t11 - Show average grade of each group." +
+                                          "\n\tAny other key to exit.");
                         int.TryParse(Console.ReadLine(), out int result);
                         switch (result)
                         {
@@ -73,7 +84,11 @@ namespace ConsoleApp1
                                 {
                                     while (reader.Read())
                                     {
-                                        Console.WriteLine($"Full name: {reader["FullName"]}\nGroup name:{reader["GroupName"]}\nYear average grade:{reader["YearAverageGrade"]}\nMinimal average grade:{reader["MinAverageGradeSubj"]}\nMaximal average grade:{reader["MaxAverageGradeSubj"]}");
+                                        Console.WriteLine($"Full name: {reader["FullName"]}" +
+                                                         $"\nGroup name:{reader["GroupName"]}" +
+                                                         $"\nYear average grade:{reader["YearAverageGrade"]}" +
+                                                         $"\nMinimal average grade:{reader["MinAverageGradeSubj"]}" +
+                                                         $"\nMaximal average grade:{reader["MaxAverageGradeSubj"]}");
                                         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
                                     }
