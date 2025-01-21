@@ -69,9 +69,9 @@ namespace ConsoleApp1
                                           "\n\t5 - Show subjects with minimal average grades." +
                                           "\n\t6 - Show minimal average grade." +
                                           "\n\t7 - Show maximal average grade." +
-                                          "\n\t8 - Show number of stidents with minimal average grade at mathematics." +
-                                          "\n\t9 - Show number of stidents with maximal average grade at mathematics." +
-                                          "\n\t10 - Show number of stidents in each group." +
+                                          "\n\t8 - Show number of students with minimal average grade at mathematics." +
+                                          "\n\t9 - Show number of students with maximal average grade at mathematics." +
+                                          "\n\t10 - Show number of students in each group." +
                                           "\n\t11 - Show average grade of each group." +
                                           "\n\tAny other key to exit.");
                         int.TryParse(Console.ReadLine(), out int result);
